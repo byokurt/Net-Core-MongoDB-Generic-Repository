@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/MongoDBExample
+/MongoDBExample/.vs/MongoDBExample/v16
+/MongoDBExample/.vs/MongoDBExample
+/MongoDBExample/MongoDBExample/obj
+/MongoDBExample/MongoDBExample/bin/Debug/netcoreapp3.1
