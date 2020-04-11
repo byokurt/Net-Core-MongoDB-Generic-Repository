@@ -4,7 +4,7 @@ using System;
 
 namespace MongoDBExample.Entities.BusinessEntities.Base
 {
-    public interface IDocument<IdType>
+    public interface BaseEntity<IdType>
     {
         [BsonId]
         [BsonRepresentation(BsonType.String)]

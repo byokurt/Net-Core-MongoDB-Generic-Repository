@@ -23,5 +23,12 @@ namespace MongoDBExample.Controllers
         {
             return _collection.GetService<IPersonService>().Add(request);
         }
+
+        [HttpGet]
+        [Route("Deneme")]
+        public bool Deneme()
+        {
+            return true;
+        }
     }
 }

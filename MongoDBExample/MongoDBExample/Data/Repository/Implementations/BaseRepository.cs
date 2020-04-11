@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MongoDBExample.Data.Repository.Implementations
 {
-    public abstract class BaseRepository<T, IdType> : IBaseRepository<T, IdType> where T : IDocument<IdType>
+    public abstract class BaseRepository<T, IdType> : IBaseRepository<T, IdType> where T : BaseEntity<IdType>
     {
         protected readonly MongoDBContext _mongoContext;
         protected IMongoCollection<T> _dbCollection;

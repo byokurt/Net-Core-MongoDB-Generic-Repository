@@ -5,7 +5,7 @@ using System;
 namespace MongoDBExample.Entities.BusinessEntities
 {
     [BsonCollection("people")]
-    public class Person : IDocument<int>
+    public class Person : BaseEntity<int>
     {
         public int Id { get; set; }
         public DateTime CreateDate { get; set; }

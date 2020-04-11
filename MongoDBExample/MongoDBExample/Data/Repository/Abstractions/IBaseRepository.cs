@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MongoDBExample.Data.Repository.Abstractions
 {
-    public interface IBaseRepository<T, IdType> where T : IDocument<IdType>
+    public interface IBaseRepository<T, IdType> where T : BaseEntity<IdType>
     {
         T Add(T entity);
         T GetById(IdType id);
