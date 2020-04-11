@@ -1,6 +1,5 @@
 ﻿using MongoDBExample.Entities.BusinessEntities.Base;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace MongoDBExample.Data.Repository.Abstractions
 {
