@@ -4,9 +4,10 @@ using MongoDBExample.Helpers;
 
 namespace MongoDBExample.Data
 {
-    public class IMongoDBContext
+    public interface IMongoDBContext
     {
         IMongoDatabase _db { get; }
         MongoClient _mongoClient { get; }
+        IMongoCollection<T> GetCollection<T>(string name);
     }
 }

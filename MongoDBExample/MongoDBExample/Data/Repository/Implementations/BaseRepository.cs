@@ -10,10 +10,10 @@ namespace MongoDBExample.Data.Repository.Implementations
 {
     public abstract class BaseRepository<T, IdType> : IBaseRepository<T, IdType> where T : BaseEntity<IdType>
     {
-        protected readonly MongoDBContext _mongoContext;
+        protected readonly IMongoDBContext _mongoContext;
         protected IMongoCollection<T> _dbCollection;
 
-        protected BaseRepository(MongoDBContext context)
+        protected BaseRepository(IMongoDBContext context)
         {
             _mongoContext = context;
             _dbCollection = _mongoContext.GetCollection<T>(typeof(T).Name);
