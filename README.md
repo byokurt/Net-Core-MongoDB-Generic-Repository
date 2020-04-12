@@ -1,6 +1,6 @@
 # .Net Core MongoDB Generic Repository 
 <br/>
-Merhabalar .Net Core üzerinde MongoDB ve buna bağlı Mongo Generic Repository kullanımına ait bir uygulama gelitirdim. Bilgi paylaştıkça çoğalır diyerek sizinde faydalanmanız için gerekli repoyu github hesabıma ekledim.
+Merhabalar .Net Core üzerinde MongoDB ve buna bağlı Generic Repository kullanımına ait bir uygulama gelitirdim. Bilgi paylaştıkça çoğalır diyerek sizinde faydalanmanız için gerekli repoyu github hesabıma ekledim.
 <br/><br/>
 
 Kısaca MongoDB Nedir?
