@@ -1,4 +1,5 @@
-﻿using MongoDBExample.Entities.ClientEntities;
+﻿using MongoDBExample.Entities.ClientEntities.Request;
+using MongoDBExample.Entities.ClientEntities.Response;
 using System;
 
 namespace MongoDBExample.Business.Abstractions
@@ -7,7 +8,7 @@ namespace MongoDBExample.Business.Abstractions
     {
         bool Add(AddPersonRequest request);
 
-        bool Get(Guid request);
+        GetPersonResponse Get(Guid request);
 
         bool Delete(Guid request);
     }

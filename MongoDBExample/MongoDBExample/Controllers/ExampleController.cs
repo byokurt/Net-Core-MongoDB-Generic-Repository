@@ -2,7 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Mvc;
 using MongoDBExample.Business.Abstractions;
-using MongoDBExample.Entities.ClientEntities;
+using MongoDBExample.Entities.ClientEntities.Response;
+using MongoDBExample.Entities.ClientEntities.Request;
 
 namespace MongoDBExample.Controllers
 {
@@ -29,21 +30,21 @@ namespace MongoDBExample.Controllers
 
         [HttpGet]
         [Route("Get")]
-        public bool Get(Guid request)
+        public GetPersonResponse Get(Guid q)
         {
             using (var scope = _collection.CreateScope())
             {
-                return _collection.GetService<IPersonService>().Get(request);
+                return _collection.GetService<IPersonService>().Get(q);
             }
         }
 
-        [HttpGet]
+        [HttpDelete]
         [Route("Delete")]
-        public bool Delete(Guid request)
+        public bool Delete(Guid q)
         {
             using (var scope = _collection.CreateScope())
             {
-                return _collection.GetService<IPersonService>().Delete(request);
+                return _collection.GetService<IPersonService>().Delete(q);
             }
         }
     }

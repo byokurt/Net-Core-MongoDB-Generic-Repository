@@ -4,6 +4,8 @@ using MongoDBExample.Business.Abstractions;
 using MongoDBExample.Data.Repository.Abstractions;
 using MongoDBExample.Entities.BusinessEntities;
 using MongoDBExample.Entities.ClientEntities;
+using MongoDBExample.Entities.ClientEntities.Request;
+using MongoDBExample.Entities.ClientEntities.Response;
 
 namespace MongoDBExample.Business.Implementations
 {
@@ -29,10 +31,20 @@ namespace MongoDBExample.Business.Implementations
             return person != null ? true : false;
         }
 
-        public bool Get(Guid request)
+        public GetPersonResponse Get(Guid request)
         {
+            GetPersonResponse response = new GetPersonResponse();
+
             var person = _collection.GetService<IPersonRepository>().GetById(request);
-            return person != null ? true : false;
+
+            if (person != null)
+            {
+                response.Id = person.Id;
+                response.FirstName = person.FirstName;
+                response.LastName = person.LastName;
+                response.BirthDate = person.BirthDate;
+            }
+            return response;
         }
 
         public bool Delete(Guid request)
