@@ -4,11 +4,10 @@ using MongoDBExample.Helpers;
 
 namespace MongoDBExample.Data
 {
-    public class MongoDBContext
+    public class MongoDBContext : IMongoDBContext
     {
         private IMongoDatabase _db { get; set; }
         private MongoClient _mongoClient { get; set; }
-        public IClientSessionHandle Session { get; set; }
 
         public MongoDBContext(IOptions<MongoDbSettings> configuration)
         {

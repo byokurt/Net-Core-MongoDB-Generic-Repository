@@ -28,7 +28,7 @@ namespace MongoDBExample
 
             services.AddSingleton<IMongoDbSettings>(serviceProvider => serviceProvider.GetRequiredService<IOptions<MongoDbSettings>>().Value);
 
-            services.AddScoped(typeof(IBaseRepository<,>), typeof(BaseRepository<,>));
+            services.AddSingleton<IMongoDBContext, MongoDBContext>();
 
             services.RegisterRepos();
             services.RegisterServices();
