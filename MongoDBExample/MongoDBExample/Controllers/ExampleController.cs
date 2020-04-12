@@ -21,7 +21,11 @@ namespace MongoDBExample.Controllers
         [Route("Add")]
         public bool Add(AddPersonRequest request)
         {
-            return _collection.GetService<IPersonService>().Add(request);
+            using(var scope = _collection.CreateScope())
+            {
+                return _collection.GetService<IPersonService>().Add(request);
+
+            }
         }
 
         [HttpGet]

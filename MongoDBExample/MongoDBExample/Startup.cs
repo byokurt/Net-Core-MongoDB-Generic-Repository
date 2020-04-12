@@ -26,6 +26,7 @@ namespace MongoDBExample
         {
             services.Configure<MongoDbSettings>(Configuration.GetSection("MongoDbSettings"));
 
+            services.AddControllers();
             services.AddSingleton<IMongoDbSettings>(serviceProvider => serviceProvider.GetRequiredService<IOptions<MongoDbSettings>>().Value);
 
             services.AddSingleton<IMongoDBContext, MongoDBContext>();
@@ -33,7 +34,6 @@ namespace MongoDBExample
             services.RegisterRepos();
             services.RegisterServices();
 
-            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
