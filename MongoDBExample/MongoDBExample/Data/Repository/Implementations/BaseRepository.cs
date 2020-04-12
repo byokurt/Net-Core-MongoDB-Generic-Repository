@@ -27,18 +27,17 @@ namespace MongoDBExample.Data.Repository.Implementations
 
         public virtual T GetById(Guid id)
         {
-            var data = _dbCollection.Find(Builders<T>.Filter.Eq("_id", id));
-            return data.FirstOrDefault();
+            return _dbCollection.Find<T>(m => m.Id == id).FirstOrDefault();
         }
 
         public virtual void Remove(Guid id)
         {
-            _dbCollection.DeleteOne(Builders<T>.Filter.Eq("_id", id));
+            _dbCollection.DeleteOne(m => m.Id == id);
         }
 
         public virtual IEnumerable<T> GetAll()
         {
-            return _dbCollection.Find(Builders<T>.Filter.Empty).ToList();
+            return _dbCollection.Find<T>(T => true).ToList();
         }
 
         public void Update(T entity)
