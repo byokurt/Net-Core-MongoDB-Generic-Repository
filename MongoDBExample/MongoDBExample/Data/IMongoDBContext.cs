@@ -6,7 +6,7 @@ namespace MongoDBExample.Data
 {
     public class IMongoDBContext
     {
-        IMongoDatabase _db { get; set; }
-        MongoClient _mongoClient { get; set; }
+        IMongoDatabase _db { get; }
+        MongoClient _mongoClient { get; }
     }
 }
