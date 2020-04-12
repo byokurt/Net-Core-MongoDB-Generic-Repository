@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace MongoDBExample.Data.Repository.Implementations
 {
-    public abstract class BaseRepository<T, IdType> : IBaseRepository<T, IdType> where T : BaseEntity<IdType>
+    public abstract class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
-        protected readonly MongoDBContext _mongoContext;
+        protected readonly IMongoDBContext _mongoContext;
         protected IMongoCollection<T> _dbCollection;
 
-        protected BaseRepository(MongoDBContext context)
+        protected BaseRepository(IMongoDBContext context)
         {
             _mongoContext = context;
             _dbCollection = _mongoContext.GetCollection<T>(typeof(T).Name);
@@ -25,13 +25,13 @@ namespace MongoDBExample.Data.Repository.Implementations
             return entity;
         }
 
-        public virtual T GetById(IdType id)
+        public virtual T GetById(Guid id)
         {
             var data = _dbCollection.Find(Builders<T>.Filter.Eq("_id", id));
             return data.FirstOrDefault();
         }
 
-        public virtual void Remove(IdType id)
+        public virtual void Remove(Guid id)
         {
             _dbCollection.DeleteOne(Builders<T>.Filter.Eq("_id", id));
         }

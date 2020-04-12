@@ -4,12 +4,12 @@ using System;
 
 namespace MongoDBExample.Entities.BusinessEntities.Base
 {
-    public interface BaseEntity<IdType>
+    public class BaseEntity
     {
         [BsonId]
         [BsonRepresentation(BsonType.String)]
-        IdType Id { get; set; }
+        public Guid Id { get; set; }
 
-        DateTime CreateDate { get; }
+        public DateTime CreateDate { get; set; }
     }
 }

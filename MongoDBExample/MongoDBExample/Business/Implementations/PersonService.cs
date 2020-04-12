@@ -28,5 +28,17 @@ namespace MongoDBExample.Business.Implementations
 
             return person != null ? true : false;
         }
+
+        public bool Get(Guid request)
+        {
+            var person = _collection.GetService<IPersonRepository>().GetById(request);
+            return person != null ? true : false;
+        }
+
+        public bool Delete(Guid request)
+        {
+            _collection.GetService<IPersonRepository>().Remove(request);
+            return true;
+        }
     }
 }

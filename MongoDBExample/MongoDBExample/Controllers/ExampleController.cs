@@ -17,18 +17,34 @@ namespace MongoDBExample.Controllers
             _collection = collection;
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("Add")]
         public bool Add(AddPersonRequest request)
         {
-            return _collection.GetService<IPersonService>().Add(request);
+            using (var scope = _collection.CreateScope())
+            {
+                return _collection.GetService<IPersonService>().Add(request);
+            }
         }
 
         [HttpGet]
-        [Route("Deneme")]
-        public bool Deneme()
+        [Route("Get")]
+        public bool Get(Guid request)
         {
-            return true;
+            using (var scope = _collection.CreateScope())
+            {
+                return _collection.GetService<IPersonService>().Get(request);
+            }
+        }
+
+        [HttpGet]
+        [Route("Delete")]
+        public bool Delete(Guid request)
+        {
+            using (var scope = _collection.CreateScope())
+            {
+                return _collection.GetService<IPersonService>().Delete(request);
+            }
         }
     }
 }
