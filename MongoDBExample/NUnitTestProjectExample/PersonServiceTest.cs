@@ -6,6 +6,7 @@ using NUnit.Framework;
 using System;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDBExample.Business.Implementations;
+using FizzWare.NBuilder;
 
 namespace NUnitTestProjectExample
 {
@@ -28,18 +29,7 @@ namespace NUnitTestProjectExample
 
             var request = Guid.NewGuid();
 
-            #region Model
-            var getPersonResponse = new GetPersonResponse();
-            getPersonResponse.FirstName = "Osman";
-            getPersonResponse.LastName = "KURT";
-            getPersonResponse.BirthDate = DateTime.Now;
-
-            var personResponse = new Person();
-            personResponse.FirstName = "Osman";
-            personResponse.LastName = "KURT";
-            personResponse.BirthDate = DateTime.Now;
-            #endregion
-
+            var personResponse = Builder<Person>.CreateNew().Build();
 
             PersonRepository.GetById(request).Returns(personResponse);
             _serviceProvider.GetService<IPersonRepository>().Returns(PersonRepository);
