@@ -1,0 +1,164 @@
+{
+  "format": 1,
+  "restore": {
+    "Y:\\WebProjeleri\\Net-Core-MongoDB-Generic-Repository\\MongoDBExample\\NUnitTestProjectExample\\NUnitTestProjectExample.csproj": {}
+  },
+  "projects": {
+    "Y:\\WebProjeleri\\Net-Core-MongoDB-Generic-Repository\\MongoDBExample\\MongoDBExample\\MongoDBExample.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "Y:\\WebProjeleri\\Net-Core-MongoDB-Generic-Repository\\MongoDBExample\\MongoDBExample\\MongoDBExample.csproj",
+        "projectName": "MongoDBExample",
+        "projectPath": "Y:\\WebProjeleri\\Net-Core-MongoDB-Generic-Repository\\MongoDBExample\\MongoDBExample\\MongoDBExample.csproj",
+        "packagesPath": "C:\\Users\\osman\\.nuget\\packages\\",
+        "outputPath": "Y:\\WebProjeleri\\Net-Core-MongoDB-Generic-Repository\\MongoDBExample\\MongoDBExample\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\osman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "Y:\\WebProjeleri\\Net-Core-MongoDB-Generic-Repository\\MongoDBExample\\NUnitTestProjectExample\\NUnitTestProjectExample.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "Y:\\WebProjeleri\\Net-Core-MongoDB-Generic-Repository\\MongoDBExample\\NUnitTestProjectExample\\NUnitTestProjectExample.csproj",
+        "projectName": "NUnitTestProjectExample",
+        "projectPath": "Y:\\WebProjeleri\\Net-Core-MongoDB-Generic-Repository\\MongoDBExample\\NUnitTestProjectExample\\NUnitTestProjectExample.csproj",
+        "packagesPath": "C:\\Users\\osman\\.nuget\\packages\\",
+        "outputPath": "Y:\\WebProjeleri\\Net-Core-MongoDB-Generic-Repository\\MongoDBExample\\NUnitTestProjectExample\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\osman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "Y:\\WebProjeleri\\Net-Core-MongoDB-Generic-Repository\\MongoDBExample\\MongoDBExample\\MongoDBExample.csproj": {
+                "projectPath": "Y:\\WebProjeleri\\Net-Core-MongoDB-Generic-Repository\\MongoDBExample\\MongoDBExample\\MongoDBExample.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.4.0, )"
+            },
+            "NBuilder": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "NSubstitute": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.15.1, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
